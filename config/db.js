@@ -2,7 +2,7 @@ require('dotenv').config();
 const mongoose= require('mongoose');
       mongoose.set('useFindAndModify', false);
       mongoose.set('useCreateIndex', true);
-const mongodbUri = 'mongodb+srv://sharad:Vermasaloni@12644@myfirstcluster.q3xza.mongodb.net/node-google-0auth2-jwt?retryWrites=true&w=majority';
+const mongodbUri = process.env.MONGO_DB;
 
 const connectDB = async () => {
   try {

@@ -4,8 +4,8 @@ const connectCloudinary = async () => {
     try {
       await cloudinary.config({
             cloud_name:'socialadda',
-            api_key:'847675548688454',
-            api_secret:'ZF0doSpYwCTZ4oENFbGrQDp4ToU'
+            api_key:process.env.CLOUDNIARY_API_KEY,
+            api_secret:process.env.CLOUDNIARY_SECRET_KEY
             });
       console.log('Cloudinary Connected !!');
     } catch (err) {

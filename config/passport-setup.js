@@ -10,9 +10,9 @@ passport.use(
   new GoogleStrategy(
     {
       // options for strategy
-      callbackURL: 'https://svfrzvhli1.execute-api.ap-south-1.amazonaws.com/dev/google/callback',
-      clientID: '1013984577063-q5i5pcqu91608jdgjivgvq0iaia6v8qa.apps.googleusercontent.com',
-      clientSecret: 'JA_h5PghtxzkrE9LVWJjXoYE'
+      callbackURL: process.env.CallbackURL,
+      clientID: process.env.ClientID,
+      clientSecret: process.env.ClientSecret
     },
     async (accessToken, refreshToken, profile, done) => {
       const profileID = profile.id;
