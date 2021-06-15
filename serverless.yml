@@ -8,7 +8,7 @@ provider:
   stage: dev
   region: ap-south-1
   iam:
-    role: arn:aws:iam::224816550212:role/serverlessRole
+    role: arn:aws:iam::224816550212:role/service-role/crud-serverless
 
 functions:
   app:
