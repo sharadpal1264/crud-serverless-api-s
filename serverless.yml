@@ -1,0 +1,18 @@
+service: crud-serverless-lambda
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+  iam:
+    role: arn:aws:iam::224816550212:role/serverlessRole
+
+functions:
+  app:
+    handler: index.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
